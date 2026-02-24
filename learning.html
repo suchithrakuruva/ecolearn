@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Center | EcoLearn</title>
+    <meta name="description"
+        content="Explore interactive lessons on climate, biodiversity, water, and waste on EcoLearn." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <a href="index.html"><button class="btn sm" style="margin-bottom:16px;">⬅ Back to Hub</button></a>
+
+        <div class="section-heading">📚 Learning Center</div>
+
+        <!-- Path selector -->
+        <div style="margin-bottom:20px;">
+            <label style="color:var(--green4);font-size:0.88rem;display:block;margin-bottom:6px;">Choose a Learning
+                Path:</label>
+            <select class="eco-select" id="path-select" style="max-width:400px;"></select>
+        </div>
+
+        <!-- Path header with progress -->
+        <div id="path-header"></div>
+
+        <hr class="eco" />
+
+        <!-- Two-column: videos + lessons -->
+        <div style="display:grid;grid-template-columns:3fr 2fr;gap:32px;" id="content-cols">
+            <div>
+                <div class="section-heading sm">🎥 Videos</div>
+                <div id="video-player" style="margin-bottom:20px;"></div>
+                <div class="section-heading sm">All Videos in This Path</div>
+                <div id="all-videos"></div>
+            </div>
+            <div>
+                <div class="section-heading sm">📘 Lessons</div>
+                <div id="lessons-list"></div>
+                <div style="margin-top:16px;" id="continue-btn"></div>
+            </div>
+        </div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>
+        // Responsive: stack columns on small screens
+        const cols = document.getElementById("content-cols");
+        if (window.innerWidth < 800) cols.style.gridTemplateColumns = "1fr";
+        initLearning();
+    </script>
+</body>
+
+</html>

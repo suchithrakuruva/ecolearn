@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dashboard | EcoLearn</title>
+    <meta name="description"
+        content="Your personal EcoLearn dashboard — streaks, progress, achievements, impact, and goals." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <div
+            style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+            <a href="index.html"><button class="btn sm">⬅ Back to Hub</button></a>
+            <div style="display:flex;gap:8px;">
+                <button class="nav-btn" onclick="showToast('⚙️ Settings panel coming soon!')">⚙️ Settings</button>
+                <button class="nav-btn" onclick="showToast('🚪 You have been logged out.')">🚪 Logout</button>
+            </div>
+        </div>
+
+        <hr class="eco" />
+
+        <!-- Profile card -->
+        <div id="profile-card">
+            <div style="color:var(--green4);padding:20px 0;">Loading profile…</div>
+        </div>
+
+        <!-- Dashboard Tabs -->
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="tab-overview">🌍 Overview</button>
+            <button class="tab-btn" data-tab="tab-streaks">🔥 Streaks</button>
+            <button class="tab-btn" data-tab="tab-progress">📈 Progress</button>
+            <button class="tab-btn" data-tab="tab-achievements">🏅 Achievements</button>
+            <button class="tab-btn" data-tab="tab-impact">🌱 Impact</button>
+            <button class="tab-btn" data-tab="tab-goals">🎯 Goals</button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div class="tab-panel active" id="tab-overview">
+            <div class="section-heading sm">Your Eco Journey at a Glance</div>
+            <div class="grid-4" id="overview-stats" style="margin-bottom:24px;"></div>
+
+            <div class="section-heading sm">Recent Activity</div>
+            <div id="recent-activity"></div>
+        </div>
+
+        <!-- Streaks Tab -->
+        <div class="tab-panel" id="tab-streaks">
+            <div class="section-heading sm">🔥 Your Streaks</div>
+            <div class="grid-3" id="streak-boxes" style="margin-bottom:24px;"></div>
+
+            <div class="section-heading sm">This Week</div>
+            <div class="week-grid" id="week-grid"></div>
+        </div>
+
+        <!-- Progress Tab -->
+        <div class="tab-panel" id="tab-progress">
+            <div class="section-heading sm">📈 Learning Progress</div>
+            <div id="progress-list"></div>
+        </div>
+
+        <!-- Achievements Tab -->
+        <div class="tab-panel" id="tab-achievements">
+            <div class="section-heading sm">🏅 Your Badges</div>
+            <div class="grid-4" id="badges-grid"></div>
+        </div>
+
+        <!-- Impact Tab -->
+        <div class="tab-panel" id="tab-impact">
+            <div class="section-heading sm">🌱 Your Real-World Impact</div>
+            <div class="impact-grid" id="impact-stats" style="margin-bottom:24px;"></div>
+
+            <div
+                style="background:linear-gradient(135deg,var(--bg3),var(--bg4));border-radius:var(--radius);padding:24px;border:1px solid var(--green2);text-align:center;">
+                <div style="font-size:1.05rem;color:var(--green5);">🌍 Equivalent CO₂ offset by your actions</div>
+                <div style="font-size:3rem;font-weight:800;color:var(--green2);margin:8px 0;">12.4 kg</div>
+                <div style="color:var(--green3);font-size:0.88rem;">Keep going — every action counts! 💚</div>
+            </div>
+        </div>
+
+        <!-- Goals Tab -->
+        <div class="tab-panel" id="tab-goals">
+            <div class="section-heading sm">🎯 Your Goals</div>
+            <div id="goals-list"></div>
+        </div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>initDashboard();</script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Challenges | EcoLearn</title>
+    <meta name="description" content="Take on real-world eco challenges and earn eco points on EcoLearn." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <a href="index.html"><button class="btn sm" style="margin-bottom:16px;">⬅ Back to Hub</button></a>
+
+        <div class="section-heading">🌱 Real World Eco Challenges</div>
+        <p style="color:var(--green3);font-size:0.93rem;margin-bottom:24px;">
+            Take on real eco-challenges, make a difference in your community, and earn eco points! 🌍
+        </p>
+
+        <div id="challenges-list">
+            <div style="color:var(--green4);padding:20px 0;">Loading challenges…</div>
+        </div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>initChallenges();</script>
+</body>
+
+</html>

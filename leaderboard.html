@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard | EcoLearn</title>
+    <meta name="description" content="See top eco warriors ranked by their points on EcoLearn." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <a href="index.html"><button class="btn sm" style="margin-bottom:16px;">⬅ Back to Hub</button></a>
+
+        <div class="section-heading">📊 EcoLearn Leaderboard</div>
+        <p style="color:var(--green3);font-size:0.93rem;margin-bottom:16px;">
+            Top eco warriors ranked by their points this month. Can you make the top 10? 🏆
+        </p>
+
+        <div class="filter-row">
+            <select class="eco-select" id="filter-scope">
+                <option>🏫 My School</option>
+                <option>🌍 All Schools</option>
+                <option>👥 My Team</option>
+            </select>
+            <select class="eco-select" id="filter-period">
+                <option>📅 This Month</option>
+                <option>📅 This Week</option>
+                <option>📅 All Time</option>
+            </select>
+        </div>
+
+        <div class="section-heading sm">🏆 Top 3 This Month</div>
+        <div class="podium" id="podium">
+            <div style="color:var(--green4);padding:20px 0;">Loading…</div>
+        </div>
+
+        <div class="section-heading sm">📋 Full Rankings</div>
+        <div id="lb-list">
+            <div style="color:var(--green4);padding:20px 0;">Loading…</div>
+        </div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>initLeaderboard();</script>
+</body>
+
+</html>

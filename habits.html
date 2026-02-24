@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Habits | EcoLearn</title>
+    <meta name="description" content="Build daily eco-friendly habits and earn streak rewards on EcoLearn." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <a href="index.html"><button class="btn sm" style="margin-bottom:16px;">⬅ Back to Hub</button></a>
+
+        <div class="section-heading">🌿 Build Eco Habits</div>
+        <p style="color:var(--green3);font-size:0.93rem;margin-bottom:6px;">
+            📅 Today: <strong style="color:var(--green5);" id="today-date"></strong>
+            &nbsp;|&nbsp; Track your daily eco habits and build a streak! 🔥
+        </p>
+
+        <div class="section-heading sm">✅ Today's Habits Checklist</div>
+        <div id="habits-list">
+            <div style="color:var(--green4);padding:20px 0;">Loading habits…</div>
+        </div>
+
+        <hr class="eco" />
+
+        <div class="section-heading sm">📊 Today's Summary</div>
+        <div class="grid-3" style="margin-bottom:20px;">
+            <div class="achievement-card">
+                <div style="font-size:2rem;">✅</div>
+                <div class="big" id="stat-done">0</div>
+                <div class="label">Habits Completed</div>
+            </div>
+            <div class="achievement-card">
+                <div style="font-size:2rem;">🌱</div>
+                <div class="big" id="stat-pts">0</div>
+                <div class="label">Eco Points Earned</div>
+            </div>
+            <div class="achievement-card">
+                <div style="font-size:2rem;">🏆</div>
+                <div class="big" id="stat-pct">0%</div>
+                <div class="label">Daily Goal Progress</div>
+            </div>
+        </div>
+
+        <div class="pbar-wrap" style="height:14px;">
+            <div class="pbar-fill" id="habit-pbar" style="width:0%"></div>
+        </div>
+        <div id="habit-msg" style="margin-top:12px;"></div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>initHabits();</script>
+</body>
+
+</html>

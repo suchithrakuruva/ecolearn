@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Games | EcoLearn</title>
+    <meta name="description" content="Play eco-themed trivia and mini-games on EcoLearn." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container">
+        <a href="index.html"><button class="btn sm" style="margin-bottom:16px;">⬅ Back to Hub</button></a>
+
+        <div class="section-heading">🎮 Eco Trivia Quiz</div>
+        <p style="color:var(--green3);font-size:0.93rem;margin-bottom:20px;">
+            Test your eco knowledge! Answer all questions to earn bonus Eco Points. 🌍
+        </p>
+
+        <!-- Quiz section -->
+        <div id="quiz-section">
+            <div id="quiz-list">
+                <div style="color:var(--green4);padding:20px 0;">Loading questions…</div>
+            </div>
+            <button class="btn full" style="margin-top:16px;" onclick="submitQuiz()">🎯 Submit Quiz!</button>
+        </div>
+
+        <!-- Results section (hidden until submitted) -->
+        <div id="results-section" style="display:none;">
+            <div id="score-box"></div>
+            <div class="section-heading sm">📋 Review Your Answers</div>
+            <div id="review-list"></div>
+            <button class="btn full" style="margin-top:16px;" onclick="retakeQuiz()">🔄 Retake Quiz</button>
+        </div>
+
+        <hr class="eco" />
+        <div id="footer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+    <script>initGames();</script>
+</body>
+
+</html>

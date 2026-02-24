@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoLearn Hub 🌱</title>
+  <meta name="description" content="EcoLearn — Empowering students with eco-education, challenges, habits and teams for a greener planet."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-cols">
+      <div class="hero-quote">
+        <div style="font-size:2rem;margin-bottom:12px;">🌍</div>
+        <em>"The Earth does not belong to us, we belong to the Earth. Every action you take today
+        shapes the world our grandchildren inherit tomorrow."</em>
+        <div class="hero-author">— EcoLearn Mission</div>
+        <br>
+        <div style="font-size:0.93rem;color:var(--green3);">
+          🌱 Join <strong style="color:var(--green5);">12,400+</strong> students already making a difference.
+        </div>
+      </div>
+      <div>
+        <img class="hero-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80" alt="Green forest"/>
+        <div style="text-align:center;color:var(--green3);font-size:0.8rem;margin-top:6px;">🌿 Our planet. Our responsibility.</div>
+      </div>
+    </div>
+
+    <hr class="eco"/>
+
+    <!-- CTA Cards -->
+    <div class="section-heading">🚀 Get Started Now</div>
+    <div class="grid-2" style="margin-bottom:32px;">
+      <div class="cta-card">
+        <div class="cta-icon">👥</div>
+        <div class="cta-title">Join an Eco Team</div>
+        <div class="cta-desc">Collaborate with classmates on green missions and multiply your impact together.</div>
+        <div style="margin-top:16px;">
+          <a href="teams.html"><button class="btn full">👥 Join Teams Now</button></a>
+        </div>
+      </div>
+      <div class="cta-card" style="border-color:var(--green2);background:linear-gradient(135deg,#1a3d2b,#245c3f);">
+        <div class="cta-icon">🌿</div>
+        <div class="cta-title">Build Eco Habits</div>
+        <div class="cta-desc">Track your daily eco-actions, build streaks, and earn bonus eco points every day.</div>
+        <div style="margin-top:16px;">
+          <a href="habits.html"><button class="btn full">🌿 Start My Habits</button></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="eco"/>
+
+    <!-- Learning Paths -->
+    <div class="section-heading">📚 Interactive Learning Paths</div>
+    <div class="grid-2" id="lp-grid" style="margin-bottom:8px;">
+      <div style="color:var(--green4);padding:20px 0;">Loading learning paths…</div>
+    </div>
+
+    <hr class="eco"/>
+
+    <!-- Challenges Preview -->
+    <div class="section-heading">🌱 Real World Eco Challenges</div>
+    <div class="grid-2" id="ch-grid">
+      <div style="color:var(--green4);padding:20px 0;">Loading challenges…</div>
+    </div>
+
+    <hr class="eco"/>
+    <div id="footer"></div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+  <script>initHome();</script>
+</body>
+</html>
